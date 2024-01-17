@@ -22,7 +22,7 @@ jobs:
       - name: Generate NMS Components
         run: ./gradlew generateNmsComponents
       - name: Cache Gradle dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.gradle/caches
           key: ${{ runner.OS }}-gradle-${{ hashFiles('**/*.gradle') }}
