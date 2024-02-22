@@ -15,6 +15,9 @@ class BukkitBridgeManager(
 ) {
 
     fun updateVanishedPlayersRequest(sender: Player, vanished: Boolean) {
+        if(plugin.config.getBoolean("disable-velocity-messaging")){
+            return;
+        }
         val messageJson = JsonObject()
         messageJson.addProperty("type", "Vanish")
         messageJson.addProperty("name", sender.name)

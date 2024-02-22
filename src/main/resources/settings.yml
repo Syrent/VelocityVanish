@@ -3,6 +3,10 @@ config_version: 7
 default_language: en_US
 show_dependency_suggestions: true
 
+# This feature disable the plugin messaging system
+# If disabled Velocity won't be notified about Vanish/UnVanish events
+disable-velocity-messaging: false
+
 # IMPORTANT: Legacy code support is strongly discouraged. It adversely affects performance and lacks new Minecraft chat features.
 support_legacy_color_codes: false
 
